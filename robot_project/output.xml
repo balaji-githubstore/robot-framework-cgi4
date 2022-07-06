@@ -1,45 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220706 17:25:53.227" rpa="false" schemaversion="3">
-<suite id="s1" name="Demo4 Frame" source="D:\Mine\Company\CGI4\robot_project\selenium_suite\demo4_frame.robot">
+<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220706 17:53:28.275" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo5 Alert" source="D:\Mine\Company\CGI4\robot_project\selenium_suite\demo5_alert.robot">
 <test id="s1-t1" name="TC1" line="5">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=chrome</arg>
 <arg>executable_path=D:\\Software\\chromedriver.exe</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220706 17:25:53.692" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220706 17:25:53.692" endtime="20220706 17:25:56.362"/>
+<msg timestamp="20220706 17:53:29.376" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220706 17:53:29.375" endtime="20220706 17:53:32.436"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220706 17:25:56.363" endtime="20220706 17:25:56.489"/>
+<status status="PASS" starttime="20220706 17:53:32.472" endtime="20220706 17:53:32.689"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220706 17:25:56.490" endtime="20220706 17:25:56.492"/>
+<status status="PASS" starttime="20220706 17:53:32.704" endtime="20220706 17:53:32.708"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
-<arg>url=https://netbanking.hdfcbank.com/netbanking/</arg>
+<arg>url=https://nasscom.in/nasscom-membership</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220706 17:25:56.493" level="INFO">Opening url 'https://netbanking.hdfcbank.com/netbanking/'</msg>
-<status status="PASS" starttime="20220706 17:25:56.493" endtime="20220706 17:26:00.061"/>
+<msg timestamp="20220706 17:53:32.719" level="INFO">Opening url 'https://nasscom.in/nasscom-membership'</msg>
+<status status="PASS" starttime="20220706 17:53:32.718" endtime="20220706 17:53:37.901"/>
 </kw>
-<kw name="Select Frame" library="SeleniumLibrary">
-<arg>xpath=//frame[@name='login_page']</arg>
-<doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20220706 17:26:00.066" level="INFO">Selecting frame 'xpath=//frame[@name='login_page']'.</msg>
-<status status="PASS" starttime="20220706 17:26:00.064" endtime="20220706 17:26:00.221"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>link=Calculate Membership Fee</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220706 17:53:37.911" level="INFO">Clicking element 'link=Calculate Membership Fee'.</msg>
+<status status="PASS" starttime="20220706 17:53:37.910" endtime="20220706 17:53:38.229"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name=fldLoginUserId</arg>
-<arg>test123</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220706 17:26:00.228" level="INFO">Typing text 'test123' into text field 'name=fldLoginUserId'.</msg>
-<status status="PASS" starttime="20220706 17:26:00.227" endtime="20220706 17:26:00.375"/>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<var>${alert_text}</var>
+<arg>action=ACCEPT</arg>
+<arg>timeout=30</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20220706 17:53:38.235" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:30</msg>
+<msg timestamp="20220706 17:53:38.246" level="INFO">${alert_text} = Please enter amount in digit and greater than zero.</msg>
+<status status="PASS" starttime="20220706 17:53:38.234" endtime="20220706 17:53:38.246"/>
 </kw>
-<status status="PASS" starttime="20220706 17:25:53.690" endtime="20220706 17:26:00.378"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${alert_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220706 17:53:38.259" endtime="20220706 17:53:38.274"/>
+</kw>
+<status status="PASS" starttime="20220706 17:53:29.364" endtime="20220706 17:53:38.280"/>
 </test>
-<status status="PASS" starttime="20220706 17:25:53.232" endtime="20220706 17:26:00.381"/>
+<status status="PASS" starttime="20220706 17:53:28.285" endtime="20220706 17:53:38.288"/>
 </suite>
 <statistics>
 <total>
@@ -48,7 +55,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Demo4 Frame">Demo4 Frame</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo5 Alert">Demo5 Alert</stat>
 </suite>
 </statistics>
 <errors>
