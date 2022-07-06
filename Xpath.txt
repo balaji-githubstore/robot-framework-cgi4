@@ -1,0 +1,33 @@
+Absolute xpath (not recommended)- /html/body/div[3]/div[2]/div/div/div[2]/div/div/div[1]/form/div[1]/div[7]/span/span[2]/input
+
+
+Relative xpath
+
+//tagname[@attribute='']
+//tagname[text()='']
+
+Contains
+//tagname[contains(@att,'')]
+//tagname[contains(text(),'')]
+
+
+grouping of xpath - start at 1
+(//input[@name='sex'])[3]
+
+And-or
+
+following-preceding
+
+parent-child
+
+ancestor-descendant
+
+
+
+Example:- verify in chrome -- ctrl+f
+//input[@value='-1']
+//button[@type='submit']
+
+//button[text()='Sign Up']
+//b[text()='phpMyAdmin »']
+//b[contains(text(),'phpMyAd')]

@@ -1,0 +1,14 @@
+Architecture 
+Datatypes 
+Decision making - Conditional statements - if condition
+Iterative statement - for loop, for each 
+Methods, Variable - static vs non-static 
+Class & Object 
+
+
+
+Module - math 
+	
+pow()
+sqrt()
+pi=3.14
