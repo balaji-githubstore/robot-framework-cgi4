@@ -49,3 +49,9 @@ https://www.w3schools.com/cssref/css_selectors.asp
 
 
 ------------------------
+admin, Admin123, My Info
+admin12, Admin123, Buzz
+
+---
+john, john123, Invalid credentials
+peter, peter123, Invalid credentials
