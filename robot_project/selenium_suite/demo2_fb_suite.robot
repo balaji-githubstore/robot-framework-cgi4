@@ -4,7 +4,8 @@ Library     OperatingSystem
 
 *** Test Cases ***
 TC1
-    Open Browser    browser=chrome    executable_path=D:\\Software\\chromedriver.exe
+    Open Browser    browser=chrome
+    ...     executable_path=D:\\Software\\chromedriver.exe
     Maximize Browser Window
     Set Selenium Implicit Wait    30s
     Go To    url=https://www.facebook.com/
