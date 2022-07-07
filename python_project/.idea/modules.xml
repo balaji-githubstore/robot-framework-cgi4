@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../orange_automation/.idea/orange_automation.iml" filepath="$PROJECT_DIR$/../orange_automation/.idea/orange_automation.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/python_project.iml" filepath="$PROJECT_DIR$/.idea/python_project.iml" />
       <module fileurl="file://$PROJECT_DIR$/../robot_project/.idea/robot_project.iml" filepath="$PROJECT_DIR$/../robot_project/.idea/robot_project.iml" />
     </modules>
