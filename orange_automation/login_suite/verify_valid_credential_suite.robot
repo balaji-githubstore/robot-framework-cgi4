@@ -7,12 +7,21 @@ Resource    ../resource/base/CommonFunctionalities.resource
 Test Setup      Launch Browser
 Test Teardown       End Browser
 
+Test Template       Verify Valid Credential Template
+
 *** Test Cases ***
-Verify Valid Credential Test
-    Input Text    id=txtUsername    Admin
-    Input Password    css=#txtPassword    admin123
+TC1  Admin  admin123    My Info
+TC2  Admin   admin123     Buzz
+
+*** Keywords ***
+Verify Valid Credential Template
+    [Arguments]     ${username}     ${password}     ${expected_value}
+    Input Text    id=txtUsername    ${username}
+    Input Password    css=#txtPassword     ${password}
     Click Element    id=btnLogin
-    Page Should Contain    My Info
+    Page Should Contain    ${expected_value}
+
+
 
 
 
