@@ -1,52 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220706 17:53:28.275" rpa="false" schemaversion="3">
-<suite id="s1" name="Demo5 Alert" source="D:\Mine\Company\CGI4\robot_project\selenium_suite\demo5_alert.robot">
-<test id="s1-t1" name="TC1" line="5">
+<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220707 15:36:16.398" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo8 Advance" source="D:\Mine\Company\CGI4\robot_project\selenium_suite\demo8_advance.robot">
+<test id="s1-t1" name="TC3" line="22">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=chrome</arg>
 <arg>executable_path=D:\\Software\\chromedriver.exe</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220706 17:53:29.376" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220706 17:53:29.375" endtime="20220706 17:53:32.436"/>
+<msg timestamp="20220707 15:36:16.891" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220707 15:36:16.889" endtime="20220707 15:36:21.390"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220706 17:53:32.472" endtime="20220706 17:53:32.689"/>
+<status status="PASS" starttime="20220707 15:36:21.391" endtime="20220707 15:36:21.525"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220706 17:53:32.704" endtime="20220706 17:53:32.708"/>
+<status status="PASS" starttime="20220707 15:36:21.536" endtime="20220707 15:36:21.562"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
-<arg>url=https://nasscom.in/nasscom-membership</arg>
+<arg>url=https://nasscom.in/</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220706 17:53:32.719" level="INFO">Opening url 'https://nasscom.in/nasscom-membership'</msg>
-<status status="PASS" starttime="20220706 17:53:32.718" endtime="20220706 17:53:37.901"/>
+<msg timestamp="20220707 15:36:21.581" level="INFO">Opening url 'https://nasscom.in/'</msg>
+<status status="PASS" starttime="20220707 15:36:21.581" endtime="20220707 15:36:28.771"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>link=Calculate Membership Fee</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220706 17:53:37.911" level="INFO">Clicking element 'link=Calculate Membership Fee'.</msg>
-<status status="PASS" starttime="20220706 17:53:37.910" endtime="20220706 17:53:38.229"/>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${ele}</var>
+<arg>xpath=//a[text()='Members Listing']</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20220707 15:36:28.803" level="INFO">${ele} = &lt;selenium.webdriver.remote.webelement.WebElement (session="dc5ca52c480d69f00b04ec8bfb5a8e27", element="1b76db5a-ac1a-4791-949b-71a36af4e5f2")&gt;</msg>
+<status status="PASS" starttime="20220707 15:36:28.772" endtime="20220707 15:36:28.803"/>
 </kw>
-<kw name="Handle Alert" library="SeleniumLibrary">
-<var>${alert_text}</var>
-<arg>action=ACCEPT</arg>
-<arg>timeout=30</arg>
-<doc>Handles the current alert and returns its message.</doc>
-<msg timestamp="20220706 17:53:38.235" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:30</msg>
-<msg timestamp="20220706 17:53:38.246" level="INFO">${alert_text} = Please enter amount in digit and greater than zero.</msg>
-<status status="PASS" starttime="20220706 17:53:38.234" endtime="20220706 17:53:38.246"/>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>arguments[0].click();</arg>
+<arg>ARGUMENTS</arg>
+<arg>${ele}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220707 15:36:28.806" level="INFO">Executing JavaScript:
+arguments[0].click();
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="dc5ca52c480d69f00b04ec8bfb5a8e27", element="1b76db5a-ac1a-4791-949b-71a36af4e5f2")&gt;'</msg>
+<status status="PASS" starttime="20220707 15:36:28.804" endtime="20220707 15:36:31.003"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${alert_text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220706 17:53:38.259" endtime="20220706 17:53:38.274"/>
-</kw>
-<status status="PASS" starttime="20220706 17:53:29.364" endtime="20220706 17:53:38.280"/>
+<status status="PASS" starttime="20220707 15:36:16.888" endtime="20220707 15:36:31.003"/>
 </test>
-<status status="PASS" starttime="20220706 17:53:28.285" endtime="20220706 17:53:38.288"/>
+<status status="PASS" starttime="20220707 15:36:16.401" endtime="20220707 15:36:31.006"/>
 </suite>
 <statistics>
 <total>
@@ -55,7 +53,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Demo5 Alert">Demo5 Alert</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo8 Advance">Demo8 Advance</stat>
 </suite>
 </statistics>
 <errors>

@@ -15,3 +15,17 @@ TC2
 TC3 
     Log To Console    ${my_detail}
     Log To Console    ${my_detail}[mobile]
+    
+    
+TC4
+    Log To Console    D:\mine\accounts
+    Log To Console    D:\\mine\\accounts
+    Log To Console    D:${/}mine${/}accounts
+    Log To Console    ${EXECDIR}
+    Log To Console    ${TEMPDIR}
+    Log To Console    heloo${/}king
+    Log To Console    heloo${/}king
+    Log To Console    ${TEST_NAME}
+    Log To Console    ${OUTPUT_DIR}
+    Log To Console    ${CURDIR}
+    Log To Console    ${SUITE_NAME}

@@ -31,3 +31,17 @@ Example:- verify in chrome -- ctrl+f
 //button[text()='Sign Up']
 //b[text()='phpMyAdmin »']
 //b[contains(text(),'phpMyAd')]
+
+//div[text()='Later']
+
+//input[@type='file']
+
+----------------------------
+CSS selector 
+
+#id 
+.classname
+tagname[attribute='']
+[attribute='']
+
+https://www.w3schools.com/cssref/css_selectors.asp
