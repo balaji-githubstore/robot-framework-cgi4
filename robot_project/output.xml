@@ -1,50 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220707 15:36:16.398" rpa="false" schemaversion="3">
-<suite id="s1" name="Demo8 Advance" source="D:\Mine\Company\CGI4\robot_project\selenium_suite\demo8_advance.robot">
-<test id="s1-t1" name="TC3" line="22">
+<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220707 15:41:31.042" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo10 Keyboard" source="D:\Mine\Company\CGI4\robot_project\selenium_suite\demo10_keyboard.robot">
+<test id="s1-t1" name="TC1" line="5">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=chrome</arg>
 <arg>executable_path=D:\\Software\\chromedriver.exe</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220707 15:36:16.891" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220707 15:36:16.889" endtime="20220707 15:36:21.390"/>
+<msg timestamp="20220707 15:41:31.648" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220707 15:41:31.647" endtime="20220707 15:41:33.915"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220707 15:36:21.391" endtime="20220707 15:36:21.525"/>
+<status status="PASS" starttime="20220707 15:41:33.926" endtime="20220707 15:41:34.071"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220707 15:36:21.536" endtime="20220707 15:36:21.562"/>
+<status status="PASS" starttime="20220707 15:41:34.075" endtime="20220707 15:41:34.083"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
-<arg>url=https://nasscom.in/</arg>
+<arg>url=https://www.google.com</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220707 15:36:21.581" level="INFO">Opening url 'https://nasscom.in/'</msg>
-<status status="PASS" starttime="20220707 15:36:21.581" endtime="20220707 15:36:28.771"/>
+<msg timestamp="20220707 15:41:34.087" level="INFO">Opening url 'https://www.google.com'</msg>
+<status status="PASS" starttime="20220707 15:41:34.087" endtime="20220707 15:41:37.239"/>
 </kw>
-<kw name="Get WebElement" library="SeleniumLibrary">
-<var>${ele}</var>
-<arg>xpath=//a[text()='Members Listing']</arg>
-<doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20220707 15:36:28.803" level="INFO">${ele} = &lt;selenium.webdriver.remote.webelement.WebElement (session="dc5ca52c480d69f00b04ec8bfb5a8e27", element="1b76db5a-ac1a-4791-949b-71a36af4e5f2")&gt;</msg>
-<status status="PASS" starttime="20220707 15:36:28.772" endtime="20220707 15:36:28.803"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>name=q</arg>
+<arg>hello</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220707 15:41:37.249" level="INFO">Sending key(s) ('hello',) to name=q element.</msg>
+<msg timestamp="20220707 15:41:37.787" level="INFO">Sending keys hello</msg>
+<status status="PASS" starttime="20220707 15:41:37.247" endtime="20220707 15:41:37.889"/>
 </kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>arguments[0].click();</arg>
-<arg>ARGUMENTS</arg>
-<arg>${ele}</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220707 15:36:28.806" level="INFO">Executing JavaScript:
-arguments[0].click();
-By using argument:
-'&lt;selenium.webdriver.remote.webelement.WebElement (session="dc5ca52c480d69f00b04ec8bfb5a8e27", element="1b76db5a-ac1a-4791-949b-71a36af4e5f2")&gt;'</msg>
-<status status="PASS" starttime="20220707 15:36:28.804" endtime="20220707 15:36:31.003"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220707 15:41:38.893" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220707 15:41:37.890" endtime="20220707 15:41:38.893"/>
 </kw>
-<status status="PASS" starttime="20220707 15:36:16.888" endtime="20220707 15:36:31.003"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220707 15:41:38.895" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20220707 15:41:38.895" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20220707 15:41:38.895" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20220707 15:41:38.894" endtime="20220707 15:41:38.914"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220707 15:41:38.916" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20220707 15:41:38.916" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20220707 15:41:38.916" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20220707 15:41:38.915" endtime="20220707 15:41:38.934"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220707 15:41:39.937" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220707 15:41:38.934" endtime="20220707 15:41:39.937"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220707 15:41:39.942" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20220707 15:41:39.942" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20220707 15:41:39.942" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20220707 15:41:39.941" endtime="20220707 15:41:42.583"/>
+</kw>
+<status status="PASS" starttime="20220707 15:41:31.645" endtime="20220707 15:41:42.602"/>
 </test>
-<status status="PASS" starttime="20220707 15:36:16.401" endtime="20220707 15:36:31.006"/>
+<status status="PASS" starttime="20220707 15:41:31.068" endtime="20220707 15:41:42.808"/>
 </suite>
 <statistics>
 <total>
@@ -53,7 +82,7 @@ By using argument:
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Demo8 Advance">Demo8 Advance</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo10 Keyboard">Demo10 Keyboard</stat>
 </suite>
 </statistics>
 <errors>
