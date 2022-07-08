@@ -4,7 +4,7 @@ Documentation   This suite handles test cases related to valid credential
 
 Resource    ../resource/base/CommonFunctionalities.resource
 
-Library     DataDriver      file=../test_data/orange_test_data.xlsx     sheet_name=VerifyValidCredential
+Library     DataDriver      file=../test_data/valid_credential.csv
 
 Test Setup      Launch Browser
 Test Teardown       End Browser
