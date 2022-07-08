@@ -10,8 +10,14 @@ ${URL}      https://opensource-demo.orangehrmlive.com/
 
 *** Keywords ***
 Launch Browser
-    Open Browser    browser=${BROWSER_NAME}
-    ...     executable_path=${EXECDIR}${/}driver${/}chromedriver.exe
+    IF    '${BROWSER_NAME}' == 'edge'
+        Open Browser    browser=${BROWSER_NAME}     executable_path=${EXECDIR}${/}driver${/}msedgedriver.exe
+    ELSE IF    '${BROWSER_NAME}' == 'ff'
+        Open Browser    browser=${BROWSER_NAME}     executable_path=${EXECDIR}${/}driver${/}geckodriver.exe
+    ELSE
+    Open Browser    browser=${BROWSER_NAME}     executable_path=${EXECDIR}${/}driver${/}chromedriver.exe
+    END
+
     Maximize Browser Window
     Set Selenium Implicit Wait    30s
     Set Screenshot Directory    path=${EXECDIR}${/}screenshots
