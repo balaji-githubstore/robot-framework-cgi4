@@ -22,3 +22,4 @@ Verify Add Employee Test
     Choose File    xpath=//*[@type='file']    ${EXECDIR}${/}test_data${/}profile.PNG
     Click Element    id=btnSave
     Element Attribute Value Should Be    id=personal_txtEmpFirstName    value    Bala
+#    Row Count Is Equal To X    select * from Products where emp_name=Bala   1

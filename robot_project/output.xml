@@ -1,88 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220707 15:41:31.042" rpa="false" schemaversion="3">
-<suite id="s1" name="Demo10 Keyboard" source="D:\Mine\Company\CGI4\robot_project\selenium_suite\demo10_keyboard.robot">
-<test id="s1-t1" name="TC1" line="5">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>browser=chrome</arg>
-<arg>executable_path=D:\\Software\\chromedriver.exe</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220707 15:41:31.648" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220707 15:41:31.647" endtime="20220707 15:41:33.915"/>
+<robot generator="Robot 5.0.1 (Python 3.10.2 on win32)" generated="20220708 17:38:32.229" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo1 Suite" source="D:\Mine\Company\CGI4\robot_project\request_suite\demo1_suite.robot">
+<test id="s1-t1" name="TC4" line="35">
+<kw name="Comment" library="BuiltIn">
+<arg>Post req to add a pet</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" starttime="20220708 17:38:32.668" endtime="20220708 17:38:32.669"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220707 15:41:33.926" endtime="20220707 15:41:34.071"/>
+<kw name="Get Binary File" library="OperatingSystem">
+<var>${json}</var>
+<arg>${EXECDIR}${/}Files${/}data.json</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20220708 17:38:32.670" level="INFO" html="true">Getting file '&lt;a href="file://D:\Mine\Company\CGI4\robot_project\Files\data.json"&gt;D:\Mine\Company\CGI4\robot_project\Files\data.json&lt;/a&gt;'.</msg>
+<msg timestamp="20220708 17:38:32.670" level="INFO">${json} = {
+  "id": 1006,
+  "category": {
+    "id": 0,
+    "name": "string"
+  },
+  "name": "doggie-cgkkk",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "string"...</msg>
+<status status="PASS" starttime="20220708 17:38:32.669" endtime="20220708 17:38:32.670"/>
 </kw>
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>10s</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20220707 15:41:34.075" endtime="20220707 15:41:34.083"/>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>alias=petshop</arg>
+<arg>url=https://petstore.swagger.io/v2/</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20220708 17:38:32.671" level="INFO">Creating Session using : alias=petshop, url=https://petstore.swagger.io/v2/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220708 17:38:32.671" endtime="20220708 17:38:32.672"/>
 </kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>url=https://www.google.com</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220707 15:41:34.087" level="INFO">Opening url 'https://www.google.com'</msg>
-<status status="PASS" starttime="20220707 15:41:34.087" endtime="20220707 15:41:37.239"/>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{header_dic}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220708 17:38:32.673" level="INFO">&amp;{header_dic} = { Content-Type=application/json }</msg>
+<status status="PASS" starttime="20220708 17:38:32.672" endtime="20220708 17:38:32.673"/>
 </kw>
-<kw name="Press Keys" library="SeleniumLibrary">
-<arg>name=q</arg>
-<arg>hello</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220707 15:41:37.249" level="INFO">Sending key(s) ('hello',) to name=q element.</msg>
-<msg timestamp="20220707 15:41:37.787" level="INFO">Sending keys hello</msg>
-<status status="PASS" starttime="20220707 15:41:37.247" endtime="20220707 15:41:37.889"/>
+<kw name="POST" library="RequestsLibrary">
+<var>${response}</var>
+<arg>alias=petshop</arg>
+<arg>url=pet</arg>
+<arg>headers=${header_dic}</arg>
+<arg>data=${json}</arg>
+<doc>Sends a POST request.</doc>
+<msg timestamp="20220708 17:38:32.676" level="FAIL">TypeError: Session.request() got an unexpected keyword argument 'alias'</msg>
+<status status="FAIL" starttime="20220708 17:38:32.673" endtime="20220708 17:38:32.755"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220707 15:41:38.893" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220707 15:41:37.890" endtime="20220707 15:41:38.893"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.json()}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220708 17:38:32.756" endtime="20220708 17:38:32.756"/>
 </kw>
-<kw name="Press Keys" library="SeleniumLibrary">
-<arg>None</arg>
-<arg>ARROW_DOWN</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220707 15:41:38.895" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
-<msg timestamp="20220707 15:41:38.895" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
-<msg timestamp="20220707 15:41:38.895" level="INFO">Releasing special key ARROW_DOWN.</msg>
-<status status="PASS" starttime="20220707 15:41:38.894" endtime="20220707 15:41:38.914"/>
+<kw name="Log" library="BuiltIn">
+<arg>${response.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20220708 17:38:32.757" endtime="20220708 17:38:32.757"/>
 </kw>
-<kw name="Press Keys" library="SeleniumLibrary">
-<arg>None</arg>
-<arg>ARROW_DOWN</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220707 15:41:38.916" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
-<msg timestamp="20220707 15:41:38.916" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
-<msg timestamp="20220707 15:41:38.916" level="INFO">Releasing special key ARROW_DOWN.</msg>
-<status status="PASS" starttime="20220707 15:41:38.915" endtime="20220707 15:41:38.934"/>
+<kw name="Status Should Be" library="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" starttime="20220708 17:38:32.766" endtime="20220708 17:38:32.766"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220707 15:41:39.937" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220707 15:41:38.934" endtime="20220707 15:41:39.937"/>
-</kw>
-<kw name="Press Keys" library="SeleniumLibrary">
-<arg>None</arg>
-<arg>ENTER</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220707 15:41:39.942" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
-<msg timestamp="20220707 15:41:39.942" level="INFO">Pressing special key ENTER to browser.</msg>
-<msg timestamp="20220707 15:41:39.942" level="INFO">Releasing special key ENTER.</msg>
-<status status="PASS" starttime="20220707 15:41:39.941" endtime="20220707 15:41:42.583"/>
-</kw>
-<status status="PASS" starttime="20220707 15:41:31.645" endtime="20220707 15:41:42.602"/>
+<status status="FAIL" starttime="20220708 17:38:32.667" endtime="20220708 17:38:32.773">TypeError: Session.request() got an unexpected keyword argument 'alias'</status>
 </test>
-<status status="PASS" starttime="20220707 15:41:31.068" endtime="20220707 15:41:42.808"/>
+<status status="FAIL" starttime="20220708 17:38:32.231" endtime="20220708 17:38:32.777"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Demo10 Keyboard">Demo10 Keyboard</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Demo1 Suite">Demo1 Suite</stat>
 </suite>
 </statistics>
 <errors>
